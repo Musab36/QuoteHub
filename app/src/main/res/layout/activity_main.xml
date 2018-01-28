@@ -4,57 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.salajim.musab.quotehub.MainActivity">
+    tools:context="com.salajim.musab.quotehub.ui.MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        app:srcCompat="@drawable/success"
-        android:layout_toEndOf="@+id/textView"
-        android:layout_toRightOf="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_above="@+id/btn" />
+        app:srcCompat="@drawable/success" />
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView" />
-
-    <Button
-        android:id="@+id/btn"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="View Qoutes"
-        android:textSize="20sp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textColor="@color/white"
-        android:background="@color/red" />
+        android:layout_height="match_parent" >
 
-    <TextView
-        android:id="@+id/welcomeTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome to Quote Hub"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="55dp" />
-
-    <EditText
-        android:id="@+id/quotesEditText"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_above="@+id/btn"
-        android:layout_centerHorizontal="true"
-        android:ems="10"
-        android:background="@color/white"
-        android:hint="Enter Quotes Category"
-        android:layout_marginBottom="15dp" />
+    </android.support.v4.view.ViewPager>
 
 </RelativeLayout>

@@ -1,4 +1,9 @@
-package com.salajim.musab.quotehub;
+package com.salajim.musab.quotehub.services;
+
+import android.util.Log;
+
+import com.salajim.musab.quotehub.Constants;
+import com.salajim.musab.quotehub.models.Quote;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -23,10 +28,10 @@ public class FavqsService {
 
         // Building the request URL with OKHttp
         HttpUrl.Builder urlBuilder = HttpUrl.parse(Constants.FAVQS_BASE_URL).newBuilder();
-        urlBuilder.addQueryParameter(Constants.FAVQS_QUOTES_QUERYPARAMETER, quotes);
+        urlBuilder.addQueryParameter(Constants.MY_QUERY_PARAMETER, quotes);
 
         String url = urlBuilder.build().toString();// Turns the finished URL into a String
-
+        Log.d("url",url);
         // Creating a new Request with OKHttp using the new URL
         Request request = new Request.Builder()
                 .header("Authorization", Constants.ApiKey)
@@ -35,7 +40,8 @@ public class FavqsService {
 
         // Here we are excuting our request
         Call call = client.newCall(request);// We created a Call object and placed our request in it
-        call.enqueue((Callback) callback);// Then we excute our request
+        call.enqueue(callback);// Then we excute our request
+        Log.d("after request","yes");
     }
 
     // This method will return an array list of Quote objects which we can then display.
@@ -44,14 +50,18 @@ public class FavqsService {
 
         try {
             String jsonData = response.body().string();
+            Log.d("json",jsonData);
             if(response.isSuccessful()) {
                 JSONObject favqsJson = new JSONObject(jsonData);
-
+                Log.d("jsonData", jsonData);
                 JSONArray quotesJSON = favqsJson.getJSONArray("quotes");
                 for(int i = 0; i < quotesJSON.length(); i ++) {
                     JSONObject quoteJSON = quotesJSON.getJSONObject(i);
-                    String quote = quoteJSON.getString("quote");
+                    String body = quoteJSON.getString("body");
                     String author = quoteJSON.getString("author");
+
+                    Quote quote = new Quote(body, author);
+                    quotes.add(quote);
                 }
             }
         }catch (IOException e) {

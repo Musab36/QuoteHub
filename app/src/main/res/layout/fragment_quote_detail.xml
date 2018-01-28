@@ -1,0 +1,62 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.salajim.musab.quotehub.ui.QuoteDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:id="@+id/quoteImageView"
+            android:src="@drawable/happy"
+            android:scaleType="centerCrop"/>
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Never Give Up, always keep pushing!"
+                android:id="@+id/quote"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="By: Musab Abdirahman"
+                android:id="@+id/authorTextView"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:layout_below="@+id/quote" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category: Inspiration"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:id="@+id/categoryTextView"
+                android:layout_below="@+id/quote"
+                android:textStyle="bold"
+                android:textColor="@color/orange"
+                android:layout_marginTop="20dp" />
+
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+</FrameLayout>

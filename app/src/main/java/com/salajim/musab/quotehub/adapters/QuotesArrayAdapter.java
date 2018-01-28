@@ -1,4 +1,4 @@
-package com.salajim.musab.quotehub;
+package com.salajim.musab.quotehub.adapters;
 
 import android.content.Context;
 import android.widget.ArrayAdapter;
@@ -16,7 +16,7 @@ private String[] mAuthors;
         this.mAuthors = mAuthors;
     }
 
-    // Getting the Quotes and the Authors
+    // Getting the Quote and the Authors
     @Override
     public Object getItem(int position) {
         String quote = mQuotes[position];
@@ -24,7 +24,7 @@ private String[] mAuthors;
         return String.format("%s \n By: %s", quote, author); // Formatting the string and breaking the line between the Quote and the author
     }
 
-    // Returning all the Quotes
+    // Returning all the Quote
     @Override
     public int getCount() {
         return mQuotes.length;

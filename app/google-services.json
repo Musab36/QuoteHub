@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "564547548041",
+    "firebase_url": "https://quote-hub-db0bc.firebaseio.com",
+    "project_id": "quote-hub-db0bc",
+    "storage_bucket": "quote-hub-db0bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564547548041:android:3db17d6ff4cd8ad2",
+        "android_client_info": {
+          "package_name": "com.salajim.musab.quotehub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564547548041-9cr7tjot2b3pi2l29rl5ogd3l2k0t756.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.salajim.musab.quotehub",
+            "certificate_hash": "29a85812aa91016222616cb59927cca314ebcc28"
+          }
+        },
+        {
+          "client_id": "564547548041-cnnvutj4taa8nl9a743kiediroucfqa1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA51dJEVLxxqdGk8a2AgaMrjP8i5xwicbo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564547548041-cnnvutj4taa8nl9a743kiediroucfqa1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
