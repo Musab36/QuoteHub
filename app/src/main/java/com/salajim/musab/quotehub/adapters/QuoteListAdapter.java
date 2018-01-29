@@ -1,25 +1,7 @@
 package com.salajim.musab.quotehub.adapters;
 
-import android.content.Context;
-import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-
-import com.salajim.musab.quotehub.R;
-import com.salajim.musab.quotehub.models.Quote;
-
-import org.parceler.Parcels;
-
-import java.util.ArrayList;
-
-import butterknife.Bind;
-import butterknife.ButterKnife;
-
-
-public class QuoteListAdapter extends RecyclerView.Adapter<QuoteListAdapter.QuotesViewHolder> {
+public class QuoteListAdapter {
+    /*
     private ArrayList<Quote> mQoutes = new ArrayList<>();
     private Context mContext;
 
@@ -73,5 +55,6 @@ public class QuoteListAdapter extends RecyclerView.Adapter<QuoteListAdapter.Quot
             //mCategory.setText(quote.getCategory());
         }
     }
+    */
 
 }

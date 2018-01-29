@@ -5,28 +5,22 @@ import org.parceler.Parcel;
 
 @Parcel
 public class Quote {
-    String mBody;
-    String mAuthor;
-    //String mCategory;
+    String quoteId;
+    String quote;
 
     public Quote() {
     }
 
-    public Quote(String body, String author) {
-        this.mBody = body;
-        this.mAuthor = author;
+    public Quote(String quoteId, String quote) {
+        this.quoteId = quoteId;
+        this.quote = quote;
     }
 
-    public String getBody() {
-        return mBody;
+    public String getQuoteId() {
+        return quoteId;
     }
 
-    public String getAuthor() {
-        return mAuthor;
+    public String getQuote() {
+        return quote;
     }
-   /*
-    public String getCategory() {
-        return mCategory;
-    }
-    */
 }

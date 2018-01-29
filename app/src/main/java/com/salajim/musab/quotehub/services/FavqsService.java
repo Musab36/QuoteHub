@@ -1,25 +1,7 @@
 package com.salajim.musab.quotehub.services;
 
-import android.util.Log;
-
-import com.salajim.musab.quotehub.Constants;
-import com.salajim.musab.quotehub.models.Quote;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.util.ArrayList;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.HttpUrl;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
-
 public class FavqsService {
+    /*
     // The following method builds, signs, and sends an OAuth API request using OkHttp and Signpost:
     public static void findQuotes(String quotes, Callback callback) {
 
@@ -71,4 +53,5 @@ public class FavqsService {
         }
         return quotes;
     }
+    */
 }

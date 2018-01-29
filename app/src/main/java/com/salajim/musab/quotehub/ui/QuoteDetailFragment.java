@@ -6,7 +6,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.salajim.musab.quotehub.R;
@@ -18,10 +17,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class QuoteDetailFragment extends Fragment {
-    @Bind(R.id.quoteImageView) ImageView mQuoteImageView;
-    @Bind(R.id.quote) TextView mQuoteText;
-    @Bind(R.id.authorTextView) TextView mAuthorTextView;
-    @Bind(R.id.categoryTextView) TextView mCategoryTextView;
+    @Bind(R.id.quoteTextView) TextView mQuoteText;
 
     private Quote mQuote;
 
@@ -47,9 +43,8 @@ public class QuoteDetailFragment extends Fragment {
        View view = inflater.inflate(R.layout.fragment_quote_detail, container, false);
         ButterKnife.bind(this, view);
 
-        mQuoteText.setText(mQuote.getBody());
-        mAuthorTextView.setText(mQuote.getAuthor());
-        //mCategoryTextView.setText(mQuote.getCategory());
+        mQuoteText.setText(mQuote.getQuote());
+
         return view;
     }
 

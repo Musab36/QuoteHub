@@ -1,30 +1,14 @@
 package com.salajim.musab.quotehub.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.widget.ListView;
-import android.widget.TextView;
 
 import com.salajim.musab.quotehub.R;
-import com.salajim.musab.quotehub.adapters.QuoteListAdapter;
-import com.salajim.musab.quotehub.adapters.QuotesArrayAdapter;
-import com.salajim.musab.quotehub.models.Quote;
-import com.salajim.musab.quotehub.services.FavqsService;
 
-import java.io.IOException;
-import java.util.ArrayList;
-
-import butterknife.Bind;
 import butterknife.ButterKnife;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.Response;
 
 public class QuoteListActivity extends AppCompatActivity {
+    /*
     public static final String TAG = QuoteListActivity.class.getSimpleName();
     @Bind(R.id.quotesTextView) TextView mQuotesTextView;
     @Bind(R.id.recyclerView) RecyclerView mRecyclerView;
@@ -32,7 +16,7 @@ public class QuoteListActivity extends AppCompatActivity {
     private QuotesArrayAdapter adapter;
     public ArrayList<Quote> mQuotes = new ArrayList<>();
     @Bind(R.id.listView) ListView mListView;
-    /*
+
     private String[] quotes = new String[] {"Never give up, always keep pushing and believe in yourself", "Don't cry because it's over, smile because it happened.", "Be yourself; everyone else is already taken.",
     "Be the change that you wish to see in the world.", "If you tell the truth, you don't have to remember anything.", "A friend is someone who knows all about you and still loves you.",
     "Always forgive your enemies; nothing annoys them so much.", "Live as if you were to die tomorrow. Learn as if you were to live forever.",
@@ -61,13 +45,16 @@ public class QuoteListActivity extends AppCompatActivity {
         */
 
 
+        /*
         Intent intent = getIntent(); // Getting the Intent from the MainActivity
         String quotes = intent.getStringExtra("quotes"); // Pulling the data from the Intent
 
         getQuotes(quotes);
+        */
     }
 
 
+    /*
     // Callback method for desplaying response data
     private void getQuotes(String quotes) {
         final FavqsService favqsService = new FavqsService(); //// Creating new instance of Favourite Quotes
@@ -103,4 +90,5 @@ public class QuoteListActivity extends AppCompatActivity {
 
 
     }
+    */
 }
