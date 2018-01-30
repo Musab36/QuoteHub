@@ -12,13 +12,15 @@
         android:layout_height="250dp"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="100dp"
-        card_view:cardCornerRadius="10dp">
-        
+        card_view:cardCornerRadius="10dp"
+        card_view:cardBackgroundColor="@color/fbutton_color_transparent">
+        <!--
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@drawable/control"
             android:scaleType="fitXY" />
+            -->
 
         <RelativeLayout
             android:layout_width="match_parent"
