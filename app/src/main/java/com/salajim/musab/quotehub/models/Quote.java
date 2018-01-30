@@ -7,13 +7,15 @@ import org.parceler.Parcel;
 public class Quote {
     String quoteId;
     String quote;
+    String author;
 
     public Quote() {
     }
 
-    public Quote(String quoteId, String quote) {
+    public Quote(String quoteId, String quote, String author) {
         this.quoteId = quoteId;
         this.quote = quote;
+        this.author = author;
     }
 
     public String getQuoteId() {
@@ -22,5 +24,9 @@ public class Quote {
 
     public String getQuote() {
         return quote;
+    }
+
+    public String getAuthor() {
+        return author;
     }
 }

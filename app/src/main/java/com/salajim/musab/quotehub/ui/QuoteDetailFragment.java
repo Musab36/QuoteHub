@@ -18,6 +18,7 @@ import butterknife.ButterKnife;
 
 public class QuoteDetailFragment extends Fragment {
     @Bind(R.id.quoteTextView) TextView mQuoteText;
+    @Bind(R.id.authorTextView) TextView mAuthorTextView;
 
     private Quote mQuote;
 
@@ -44,6 +45,7 @@ public class QuoteDetailFragment extends Fragment {
         ButterKnife.bind(this, view);
 
         mQuoteText.setText(mQuote.getQuote());
+        mAuthorTextView.setText(mQuote.getAuthor());
 
         return view;
     }

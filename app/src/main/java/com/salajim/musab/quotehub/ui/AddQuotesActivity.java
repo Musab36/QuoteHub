@@ -24,6 +24,7 @@ public class AddQuotesActivity extends AppCompatActivity implements View.OnClick
     EditText mQuoteEdittext;
     @Bind(R.id.submitButton)
     Button mSubmitButton;
+    @Bind(R.id.authorEditText) EditText mAuthorEditText;
 
     List<Quote> quotes;
     DatabaseReference quoteDatabase;
@@ -50,14 +51,16 @@ public class AddQuotesActivity extends AppCompatActivity implements View.OnClick
 
     private void addQuote() {
         String quotes = mQuoteEdittext.getText().toString().trim();
+        String author = mAuthorEditText.getText().toString().trim();
 
         if(!TextUtils.isEmpty(quotes)) {
             String id = quoteDatabase.push().getKey();
 
-            Quote quote = new Quote(id, quotes);
+            Quote quote = new Quote(id, quotes, author);
             quoteDatabase.child(id).setValue(quote);
 
             mQuoteEdittext.setText("");
+            mAuthorEditText.setText("");
 
             Toast.makeText(this, "Quote added!", Toast.LENGTH_SHORT).show();
         } else {
