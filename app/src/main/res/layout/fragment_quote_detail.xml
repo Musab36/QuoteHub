@@ -30,6 +30,7 @@
                 android:text="Never Give up"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:padding="10dp"
                 android:textColor="@android:color/white"
                 android:id="@+id/quoteTextView" />
 
@@ -42,7 +43,6 @@
                 android:text="Mark Taiwan"
                 android:textColor="@android:color/white"
                 android:textSize="20sp"
-                android:textStyle="italic"
                 android:layout_marginRight="15dp"/>
 
         </RelativeLayout>

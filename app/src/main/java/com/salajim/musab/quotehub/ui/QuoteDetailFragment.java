@@ -1,6 +1,7 @@
 package com.salajim.musab.quotehub.ui;
 
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -46,6 +47,9 @@ public class QuoteDetailFragment extends Fragment {
 
         mQuoteText.setText(mQuote.getQuote());
         mAuthorTextView.setText(mQuote.getAuthor());
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Capture_it.ttf");
+        mAuthorTextView.setTypeface(font);
+        mQuoteText.setTypeface(font);
 
         return view;
     }
