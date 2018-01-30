@@ -47,7 +47,8 @@ public class QuoteDetailFragment extends Fragment {
 
         mQuoteText.setText(mQuote.getQuote());
         mAuthorTextView.setText(mQuote.getAuthor());
-        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Capture_it.ttf");
+
+        Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Searns.ttf");
         mAuthorTextView.setTypeface(font);
         mQuoteText.setTypeface(font);
 
