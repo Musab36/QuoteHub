@@ -47,6 +47,35 @@
                 android:textSize="20sp"
                 android:layout_marginRight="15dp"/>
 
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_share_white_24dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="50dp"
+                android:id="@+id/shareQuote"
+                android:layout_marginBottom="10dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_favorite_white_24dp"
+                android:layout_toRightOf="@+id/shareQuote"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="50dp"
+                android:id="@+id/heartQuote"
+                android:layout_marginBottom="10dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_content_copy_white_24dp"
+                android:layout_toRightOf="@+id/heartQuote"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="50dp"
+                android:id="@+id/copyQuote"
+                android:layout_marginBottom="10dp"/>
+
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>
