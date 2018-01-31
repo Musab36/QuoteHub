@@ -7,8 +7,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.salajim.musab.quotehub.R;
 import com.salajim.musab.quotehub.models.Quote;
 
@@ -17,9 +21,10 @@ import org.parceler.Parcels;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class QuoteDetailFragment extends Fragment {
+public class QuoteDetailFragment extends Fragment implements View.OnClickListener{
     @Bind(R.id.quoteTextView) TextView mQuoteText;
     @Bind(R.id.authorTextView) TextView mAuthorTextView;
+    @Bind(R.id.heartQuote) ImageView mHeart;
 
     private Quote mQuote;
 
@@ -45,14 +50,30 @@ public class QuoteDetailFragment extends Fragment {
        View view = inflater.inflate(R.layout.fragment_quote_detail, container, false);
         ButterKnife.bind(this, view);
 
+        // Setting quotes and authors to the textviews
         mQuoteText.setText(mQuote.getQuote());
         mAuthorTextView.setText(mQuote.getAuthor());
 
+        // Onclick listeners
+        mHeart.setOnClickListener(this);
+
+        // Settingup fonts
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "fonts/Chunkfive.otf");
         mAuthorTextView.setTypeface(font);
         mQuoteText.setTypeface(font);
 
         return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v == mHeart) {
+            DatabaseReference mRef = FirebaseDatabase
+                    .getInstance()
+                    .getReference("favorites");
+            mRef.push().setValue(mQuote);
+            Toast.makeText(getContext(), "Added to favorites", Toast.LENGTH_SHORT).show();
+        }
     }
 
 }
