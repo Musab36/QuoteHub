@@ -4,191 +4,168 @@
     android:layout_height="match_parent"
     tools:context="com.salajim.musab.quotehub.fragments.HomeFragment">
 
-    <ImageView
+    <TextView
         android:layout_width="130dp"
         android:layout_height="120dp"
-        android:src="@drawable/control"
+        android:background="@drawable/control"
         android:scaleType="centerCrop"
-        android:id="@+id/inspiration" />
+        android:id="@+id/inspiration"
+        android:text="Inspiration"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/inspiration"
-        android:layout_marginLeft="15dp"
-        android:id="@+id/inspirationTextView"/>
-
-    <ImageView
         android:layout_width="130dp"
         android:layout_height="150dp"
-        android:src="@drawable/come"
+        android:background="@drawable/come"
         android:scaleType="centerCrop"
         android:layout_toRightOf="@+id/inspiration"
-        android:id="@+id/life" />
+        android:id="@+id/life"
+        android:text="Life"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/life"
-        android:layout_marginLeft="130dp"
-        android:id="@+id/lifeTextView"/>
-
-    <ImageView
         android:layout_width="130dp"
         android:layout_height="120dp"
-        android:src="@drawable/love"
+        android:background="@drawable/love"
         android:scaleType="centerCrop"
         android:layout_toRightOf="@+id/life"
-        android:id="@+id/love"/>
+        android:id="@+id/love"
+        android:text="Love"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/love"
-        android:layout_marginLeft="270dp"
-        android:id="@+id/loveTextView"/>
-
-    <ImageView
         android:layout_width="130dp"
         android:layout_height="150dp"
-        android:src="@drawable/funny"
+        android:background="@drawable/funny"
         android:scaleType="centerCrop"
         android:id="@+id/funny"
         android:layout_below="@+id/inspiration"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:text="Funny"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/funny"
-        android:layout_marginLeft="15dp"
-        android:id="@+id/funnyTextView"/>
-
-    <ImageView
         android:layout_width="130dp"
         android:layout_height="120dp"
-        android:src="@drawable/medi"
+        android:background="@drawable/medi"
         android:scaleType="centerCrop"
         android:id="@+id/positve"
         android:layout_below="@+id/life"
-        android:layout_toRightOf="@+id/lifeTextView"
-        android:layout_toEndOf="@+id/lifeTextView" />
+        android:layout_toRightOf="@+id/funny"
+        android:layout_toEndOf="@+id/funny"
+        android:text="Positive"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/positve"
-        android:layout_marginLeft="130dp"
-        android:id="@+id/positiveTextView"/>
-
-    <ImageView
         android:layout_width="130dp"
         android:layout_height="120dp"
-        android:src="@drawable/wisdom"
+        android:background="@drawable/wisdom"
         android:scaleType="centerCrop"
         android:layout_below="@+id/love"
         android:layout_toRightOf="@+id/positve"
-        android:id="@+id/wisdom"/>
+        android:id="@+id/wisdom"
+        android:text="Wisdom"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/wisdom"
-        android:layout_marginLeft="270dp"
-        android:id="@+id/wisdomTextView" />
-
-    <ImageView
         android:layout_width="130dp"
         android:layout_height="120dp"
-        android:src="@drawable/loa"
+        android:background="@drawable/loa"
         android:scaleType="centerCrop"
         android:layout_below="@+id/funny"
-        android:id="@+id/motivation"/>
+        android:id="@+id/motivation"
+        android:text="Low Of Attraction"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/motivation"
-        android:layout_marginLeft="15dp"/>
-
-    <ImageView
         android:layout_width="130dp"
         android:layout_height="120dp"
-        android:src="@drawable/wealth"
+        android:background="@drawable/gold"
         android:scaleType="centerCrop"
         android:layout_below="@+id/positve"
         android:layout_toRightOf="@+id/motivation"
-        android:id="@+id/money"/>
+        android:id="@+id/money"
+        android:text="Wealth"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/money"
-        android:layout_marginLeft="130dp"
-        android:id="@+id/moneyTextView"/>
-
-    <ImageView
         android:layout_width="130dp"
         android:layout_height="150dp"
-        android:src="@drawable/happy"
+        android:background="@drawable/happy"
         android:scaleType="centerCrop"
         android:layout_below="@+id/wisdom"
         android:layout_toRightOf="@+id/money"
-        android:id="@+id/happiness"/>
+        android:id="@+id/happiness"
+        android:text="Happiness"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/money"
-        android:layout_marginLeft="270dp"
-        android:id="@+id/happinessTextView"/>
-
-    <ImageView
         android:layout_width="130dp"
         android:layout_height="120dp"
-        android:src="@drawable/success"
+        android:background="@drawable/success"
         android:scaleType="centerCrop"
         android:layout_below="@+id/happiness"
-        android:id="@+id/success"/>
+        android:id="@+id/success"
+        android:text="Success"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/success"
-        android:layout_marginLeft="15dp"
-        android:id="@+id/successTextView"/>
-
-    <ImageView
         android:layout_width="130dp"
         android:layout_height="150dp"
-        android:src="@drawable/reach"
+        android:background="@drawable/reach"
         android:scaleType="centerCrop"
         android:layout_below="@+id/happiness"
         android:layout_toRightOf="@+id/success"
-        android:id="@+id/hope"/>
+        android:id="@+id/hope"
+        android:text="Hope"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/hope"
-        android:layout_marginLeft="130dp"
-        android:id="@+id/hopeTextView"/>
-
-    <ImageView
         android:layout_width="130dp"
         android:layout_height="120dp"
-        android:src="@drawable/friendship"
+        android:background="@drawable/friendship"
         android:scaleType="centerCrop"
         android:layout_below="@+id/money"
         android:layout_toRightOf="@+id/hope"
-        android:background="@color/darkB"
-        android:id="@+id/friendship"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/friendship"
-        android:layout_marginLeft="270dp"/>
+        android:id="@+id/friendship"
+        android:text="Friendship"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"/>
 
 </RelativeLayout>
