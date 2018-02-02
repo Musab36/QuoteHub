@@ -10,7 +10,7 @@
         android:icon="@drawable/ic_new_releases_white_24dp"
         android:title="@string/title_new" />
     <item
-        android:id="@+id/action"
+        android:id="@+id/action_favorite"
         android:icon="@drawable/ic_favorite_white_24dp"
         android:title="@string/title_favorites" />
 </menu>

@@ -1,4 +1,4 @@
-package com.salajim.musab.quotehub.ui;
+package com.salajim.musab.quotehub.fragments;
 
 
 import android.graphics.Typeface;

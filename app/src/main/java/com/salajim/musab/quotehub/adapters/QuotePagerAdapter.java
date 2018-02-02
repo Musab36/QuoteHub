@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.salajim.musab.quotehub.ui.QuoteDetailFragment;
+import com.salajim.musab.quotehub.fragments.QuoteDetailFragment;
 import com.salajim.musab.quotehub.models.Quote;
 
 import java.util.ArrayList;

@@ -10,8 +10,11 @@
     <color name="orange">#FF5733</color>
     <color name="red">#C70039</color>
     <color name="purple">#7622C9</color>
+    <color name="redishP">#CA1EA0</color>
     <color name="sky">#1AABC8</color>
     <color name="cyan">#06F9EA</color>
     <color name="white">#FFFFFF</color>
     <color name="lightpurple">#F9068E</color>
+    <color name="green">#74CA1E</color>
+    <color name="darkB">#1ECA6F</color>
 </resources>
