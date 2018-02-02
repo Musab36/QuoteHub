@@ -7,8 +7,10 @@
     <ImageView
         android:layout_width="130dp"
         android:layout_height="120dp"
-        android:background="@color/colorPrimary"
+        android:src="@drawable/control"
+        android:scaleType="centerCrop"
         android:id="@+id/inspiration" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,7 +21,8 @@
     <ImageView
         android:layout_width="130dp"
         android:layout_height="150dp"
-        android:background="@color/green"
+        android:src="@drawable/come"
+        android:scaleType="centerCrop"
         android:layout_toRightOf="@+id/inspiration"
         android:id="@+id/life" />
 
@@ -33,8 +36,9 @@
     <ImageView
         android:layout_width="130dp"
         android:layout_height="120dp"
+        android:src="@drawable/love"
+        android:scaleType="centerCrop"
         android:layout_toRightOf="@+id/life"
-        android:background="@color/orange"
         android:id="@+id/love"/>
 
     <TextView
@@ -47,7 +51,8 @@
     <ImageView
         android:layout_width="130dp"
         android:layout_height="150dp"
-        android:background="@color/red"
+        android:src="@drawable/funny"
+        android:scaleType="centerCrop"
         android:id="@+id/funny"
         android:layout_below="@+id/inspiration"
         android:layout_alignParentLeft="true"
@@ -63,7 +68,8 @@
     <ImageView
         android:layout_width="130dp"
         android:layout_height="120dp"
-        android:background="@color/colorAccent"
+        android:src="@drawable/medi"
+        android:scaleType="centerCrop"
         android:id="@+id/positve"
         android:layout_below="@+id/life"
         android:layout_toRightOf="@+id/lifeTextView"
@@ -79,9 +85,10 @@
     <ImageView
         android:layout_width="130dp"
         android:layout_height="120dp"
+        android:src="@drawable/wisdom"
+        android:scaleType="centerCrop"
         android:layout_below="@+id/love"
         android:layout_toRightOf="@+id/positve"
-        android:background="@color/cyan"
         android:id="@+id/wisdom"/>
 
     <TextView
@@ -94,8 +101,9 @@
     <ImageView
         android:layout_width="130dp"
         android:layout_height="120dp"
+        android:src="@drawable/loa"
+        android:scaleType="centerCrop"
         android:layout_below="@+id/funny"
-        android:background="@color/purple"
         android:id="@+id/motivation"/>
 
     <TextView
@@ -107,9 +115,10 @@
     <ImageView
         android:layout_width="130dp"
         android:layout_height="120dp"
+        android:src="@drawable/wealth"
+        android:scaleType="centerCrop"
         android:layout_below="@+id/positve"
         android:layout_toRightOf="@+id/motivation"
-        android:background="@color/sky"
         android:id="@+id/money"/>
 
     <TextView
@@ -122,9 +131,10 @@
     <ImageView
         android:layout_width="130dp"
         android:layout_height="150dp"
+        android:src="@drawable/happy"
+        android:scaleType="centerCrop"
         android:layout_below="@+id/wisdom"
         android:layout_toRightOf="@+id/money"
-        android:background="@color/colorPrimaryDark"
         android:id="@+id/happiness"/>
 
     <TextView
@@ -137,7 +147,8 @@
     <ImageView
         android:layout_width="130dp"
         android:layout_height="120dp"
-        android:background="@color/yellow"
+        android:src="@drawable/success"
+        android:scaleType="centerCrop"
         android:layout_below="@+id/happiness"
         android:id="@+id/success"/>
 
@@ -151,9 +162,10 @@
     <ImageView
         android:layout_width="130dp"
         android:layout_height="150dp"
+        android:src="@drawable/reach"
+        android:scaleType="centerCrop"
         android:layout_below="@+id/happiness"
         android:layout_toRightOf="@+id/success"
-        android:background="@color/redishP"
         android:id="@+id/hope"/>
 
     <TextView
@@ -166,10 +178,13 @@
     <ImageView
         android:layout_width="130dp"
         android:layout_height="120dp"
+        android:src="@drawable/friendship"
+        android:scaleType="centerCrop"
         android:layout_below="@+id/money"
         android:layout_toRightOf="@+id/hope"
         android:background="@color/darkB"
         android:id="@+id/friendship"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
