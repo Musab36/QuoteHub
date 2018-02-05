@@ -24,16 +24,6 @@ public class MainActivity extends AppCompatActivity {
 
     private ActionBar toolbar;
 
-/*
-    @Bind(R.id.viewPager) ViewPager mViewPager;
-    private ArrayList<Quote> mQuote = new ArrayList<>();
-    private QuotePagerAdapter mAdapter;
-
-    FirebaseDatabase database;
-    DatabaseReference mRef;
-    */
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,30 +39,6 @@ public class MainActivity extends AppCompatActivity {
         loadFragment(new HomeFragment());
 
         //mQuote = Parcels.unwrap(getIntent().getParcelableExtra("quote"));
-
-        /*
-        database = FirebaseDatabase.getInstance();
-        mRef = database.getReference("quotes");
-
-        mRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren()) {
-                    mQuote.add(dataSnapshot1.getValue(Quote.class));
-                }
-
-                //int startingPosition = getIntent().getIntExtra("position", 0);
-                mAdapter = new QuotePagerAdapter(getSupportFragmentManager(), mQuote);
-                mViewPager.setAdapter(mAdapter);
-                //mViewPager.setCurrentItem(startingPosition);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-        */
 
     }
 

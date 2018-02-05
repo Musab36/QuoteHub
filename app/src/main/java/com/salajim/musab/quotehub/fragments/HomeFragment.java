@@ -1,6 +1,7 @@
 package com.salajim.musab.quotehub.fragments;
 
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.salajim.musab.quotehub.R;
+import com.salajim.musab.quotehub.ui.InspirationActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -52,6 +54,14 @@ public class HomeFragment extends Fragment {
         mFriendship.setTypeface(fonts);
         mPositive.setTypeface(fonts);
         mHope.setTypeface(fonts);
+
+        mInspiration.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), InspirationActivity.class);
+                startActivity(intent);
+            }
+        });
 
         return view;
     }

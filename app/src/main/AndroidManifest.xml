@@ -28,7 +28,12 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity" />
         </activity>
-        <activity android:name=".ui.FavoriteQuotesActivity"></activity>
+        <activity android:name=".ui.FavoriteQuotesActivity" />
+        <activity android:name=".ui.InspirationActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
