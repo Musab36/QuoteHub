@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.salajim.musab.quotehub.R;
 import com.salajim.musab.quotehub.ui.InspirationActivity;
+import com.salajim.musab.quotehub.ui.LifeActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -59,6 +60,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), InspirationActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mLife.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), LifeActivity.class);
                 startActivity(intent);
             }
         });
