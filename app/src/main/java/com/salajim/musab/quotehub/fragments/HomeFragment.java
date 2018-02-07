@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.salajim.musab.quotehub.R;
 import com.salajim.musab.quotehub.ui.InspirationActivity;
 import com.salajim.musab.quotehub.ui.LifeActivity;
+import com.salajim.musab.quotehub.ui.LoveActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -68,6 +69,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), LifeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mLove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), LoveActivity.class);
                 startActivity(intent);
             }
         });
