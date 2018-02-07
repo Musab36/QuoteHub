@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.salajim.musab.quotehub.R;
+import com.salajim.musab.quotehub.ui.FunnyActivity;
 import com.salajim.musab.quotehub.ui.InspirationActivity;
 import com.salajim.musab.quotehub.ui.LifeActivity;
 import com.salajim.musab.quotehub.ui.LoveActivity;
@@ -57,6 +58,7 @@ public class HomeFragment extends Fragment {
         mPositive.setTypeface(fonts);
         mHope.setTypeface(fonts);
 
+        // OnClick Listeners
         mInspiration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,6 +79,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), LoveActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mFunny.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), FunnyActivity.class);
                 startActivity(intent);
             }
         });
