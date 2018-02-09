@@ -49,8 +49,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".ui.MainActivity" />
         </activity>
-        <activity android:name=".ui.PositiveActivity" />
-        <activity android:name=".ui.WisdomActivity"></activity>
+        <activity android:name=".ui.PositiveActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity" />
+        </activity>
+        <activity android:name=".ui.WisdomActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
