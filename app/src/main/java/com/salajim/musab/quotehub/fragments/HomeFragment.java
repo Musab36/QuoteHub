@@ -15,6 +15,8 @@ import com.salajim.musab.quotehub.ui.FunnyActivity;
 import com.salajim.musab.quotehub.ui.InspirationActivity;
 import com.salajim.musab.quotehub.ui.LifeActivity;
 import com.salajim.musab.quotehub.ui.LoveActivity;
+import com.salajim.musab.quotehub.ui.PositiveActivity;
+import com.salajim.musab.quotehub.ui.WisdomActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -22,7 +24,7 @@ import butterknife.ButterKnife;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener{
     public static final String TAG = "HomeFragment";
     @Bind(R.id.inspiration) TextView mInspiration;
     @Bind(R.id.life) TextView mLife;
@@ -59,39 +61,42 @@ public class HomeFragment extends Fragment {
         mHope.setTypeface(fonts);
 
         // OnClick Listeners
-        mInspiration.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), InspirationActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        mLife.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), LifeActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        mLove.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), LoveActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        mFunny.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), FunnyActivity.class);
-                startActivity(intent);
-            }
-        });
+        mInspiration.setOnClickListener(this);
+        mLife.setOnClickListener(this);
+        mLove.setOnClickListener(this);
+        mFunny.setOnClickListener(this);
+        mPositive.setOnClickListener(this);
+        mWisdom.setOnClickListener(this);
 
         return view;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v == mInspiration) {
+            Intent intent = new Intent(getActivity(), InspirationActivity.class);
+            startActivity(intent);
+        }
+        if(v == mLife) {
+            Intent intent = new Intent(getActivity(), LifeActivity.class);
+            startActivity(intent);
+        }
+        if(v == mLove) {
+            Intent intent = new Intent(getActivity(), LoveActivity.class);
+            startActivity(intent);
+        }
+        if(v == mFunny) {
+            Intent intent = new Intent(getActivity(), FunnyActivity.class);
+            startActivity(intent);
+        }
+        if(v == mPositive) {
+            Intent intent = new Intent(getActivity(), PositiveActivity.class);
+            startActivity(intent);
+        }
+        if(v == mWisdom) {
+            Intent intent = new Intent(getActivity(), WisdomActivity.class);
+            startActivity(intent);
+        }
     }
 
 }
