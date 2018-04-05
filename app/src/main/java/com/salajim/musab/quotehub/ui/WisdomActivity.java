@@ -36,9 +36,11 @@ public class WisdomActivity extends AppCompatActivity {
         setContentView(R.layout.activity_wisdom);
         ButterKnife.bind(this);
 
+        // Setting up the actionbar name
         toolbar = getSupportActionBar();
         toolbar.setTitle("Wisdom");
 
+        // Retrieving wisdom quotes from Firebase database
         database = FirebaseDatabase.getInstance();
         mRef = database.getReference("wisdom");
 
@@ -49,6 +51,7 @@ public class WisdomActivity extends AppCompatActivity {
                     mQuote.add(dataSnapshot1.getValue(Quote.class));
                 }
 
+                // Setting the adapter with ViewPager and displaying the data with ViewPager
                 mAdapter = new QuotePagerAdapter(getSupportFragmentManager(), mQuote);
                 mViewPager.setAdapter(mAdapter);
             }

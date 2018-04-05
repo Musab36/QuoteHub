@@ -19,12 +19,11 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class LifeActivity extends AppCompatActivity {
-public static final String TAG = LifeActivity.class.getName();
-
+public class HappinessActivity extends AppCompatActivity {
+    public static final String TAG = HappinessActivity.class.getName();
     @Bind(R.id.viewPager) ViewPager mViewPager;
-    private ArrayList<Quote> mQuote = new ArrayList<>();
     private QuotePagerAdapter mAdapter;
+    private ArrayList<Quote> mQuote = new ArrayList<>();
 
     FirebaseDatabase database;
     DatabaseReference mRef;
@@ -34,15 +33,16 @@ public static final String TAG = LifeActivity.class.getName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_life);
+        setContentView(R.layout.activity_happiness);
         ButterKnife.bind(this);
 
-        // Changing the name in the actionbar
+        // Changing the toolbar name
         toolbar = getSupportActionBar();
-        toolbar.setTitle("Life");
+        toolbar.setTitle("Happiness");
 
+        // Retrieving happiness quotes from Firebase
         database = FirebaseDatabase.getInstance();
-        mRef = database.getReference("life");
+        mRef = database.getReference("happiness");
 
         mRef.addValueEventListener(new ValueEventListener() {
             @Override

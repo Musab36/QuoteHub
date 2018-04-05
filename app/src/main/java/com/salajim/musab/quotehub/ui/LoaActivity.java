@@ -19,12 +19,11 @@ import java.util.ArrayList;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class LifeActivity extends AppCompatActivity {
-public static final String TAG = LifeActivity.class.getName();
-
+public class LoaActivity extends AppCompatActivity {
+    public static final String TAG = LoaActivity.class.getName();
     @Bind(R.id.viewPager) ViewPager mViewPager;
-    private ArrayList<Quote> mQuote = new ArrayList<>();
     private QuotePagerAdapter mAdapter;
+    private ArrayList<Quote> mQuote = new ArrayList<>();
 
     FirebaseDatabase database;
     DatabaseReference mRef;
@@ -34,15 +33,14 @@ public static final String TAG = LifeActivity.class.getName();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_life);
+        setContentView(R.layout.activity_loa);
         ButterKnife.bind(this);
 
-        // Changing the name in the actionbar
         toolbar = getSupportActionBar();
-        toolbar.setTitle("Life");
+        toolbar.setTitle("Low Of Attraction");
 
         database = FirebaseDatabase.getInstance();
-        mRef = database.getReference("life");
+        mRef = database.getReference("loa");
 
         mRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -51,7 +49,6 @@ public static final String TAG = LifeActivity.class.getName();
                     mQuote.add(dataSnapshot1.getValue(Quote.class));
                 }
 
-                // Setting the adapter with ViewPager
                 mAdapter = new QuotePagerAdapter(getSupportFragmentManager(), mQuote);
                 mViewPager.setAdapter(mAdapter);
             }

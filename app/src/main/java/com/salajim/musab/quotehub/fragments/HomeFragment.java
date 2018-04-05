@@ -11,19 +11,22 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.salajim.musab.quotehub.R;
+import com.salajim.musab.quotehub.ui.FriendshipActivity;
 import com.salajim.musab.quotehub.ui.FunnyActivity;
+import com.salajim.musab.quotehub.ui.HappinessActivity;
+import com.salajim.musab.quotehub.ui.HopeActivity;
 import com.salajim.musab.quotehub.ui.InspirationActivity;
 import com.salajim.musab.quotehub.ui.LifeActivity;
+import com.salajim.musab.quotehub.ui.LoaActivity;
 import com.salajim.musab.quotehub.ui.LoveActivity;
 import com.salajim.musab.quotehub.ui.PositiveActivity;
+import com.salajim.musab.quotehub.ui.SuccessActivity;
+import com.salajim.musab.quotehub.ui.WealthActivity;
 import com.salajim.musab.quotehub.ui.WisdomActivity;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class HomeFragment extends Fragment implements View.OnClickListener{
     public static final String TAG = "HomeFragment";
     @Bind(R.id.inspiration) TextView mInspiration;
@@ -67,10 +70,17 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         mFunny.setOnClickListener(this);
         mPositive.setOnClickListener(this);
         mWisdom.setOnClickListener(this);
+        mMotivation.setOnClickListener(this);
+        mMoney.setOnClickListener(this);
+        mHappiness.setOnClickListener(this);
+        mSuccess.setOnClickListener(this);
+        mFriendship.setOnClickListener(this);
+        mHope.setOnClickListener(this);
 
         return view;
     }
 
+    // Intents to load different activities
     @Override
     public void onClick(View v) {
         if(v == mInspiration) {
@@ -95,6 +105,30 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         }
         if(v == mWisdom) {
             Intent intent = new Intent(getActivity(), WisdomActivity.class);
+            startActivity(intent);
+        }
+        if(v == mMotivation) {
+            Intent intent = new Intent(getActivity(), LoaActivity.class);
+            startActivity(intent);
+        }
+        if(v == mMoney) {
+            Intent intent = new Intent(getActivity(), WealthActivity.class);
+            startActivity(intent);
+        }
+        if(v == mSuccess) {
+            Intent intent = new Intent(getActivity(), SuccessActivity.class);
+            startActivity(intent);
+        }
+        if(v == mFriendship) {
+            Intent intent = new Intent(getActivity(), FriendshipActivity.class);
+            startActivity(intent);
+        }
+        if(v == mHappiness) {
+            Intent intent = new Intent(getActivity(), HappinessActivity.class);
+            startActivity(intent);
+        }
+        if(v == mHope) {
+            Intent intent = new Intent(getActivity(), HopeActivity.class);
             startActivity(intent);
         }
     }

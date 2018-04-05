@@ -39,6 +39,7 @@ public class InspirationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_inspiration);
         ButterKnife.bind(this);
 
+        // Changing the name of the actionbar
         toolbar = getSupportActionBar();
         toolbar.setTitle("Inspiration");
 

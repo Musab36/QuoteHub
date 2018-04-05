@@ -36,9 +36,11 @@ public class FunnyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_funny);
         ButterKnife.bind(this);
 
+        // Changing the toolbar name
         toolbar = getSupportActionBar();
         toolbar.setTitle("Funny");
 
+        // Retrieving funny quotes from Firebase database
         database = FirebaseDatabase.getInstance();
         mRef = database.getReference("funny");
 
@@ -49,6 +51,7 @@ public class FunnyActivity extends AppCompatActivity {
                     mQuote.add(dataSnapshot1.getValue(Quote.class));
                 }
 
+                // Setting the adapter with ViewPager
                 mAdapter = new QuotePagerAdapter(getSupportFragmentManager(), mQuote);
                 mViewPager.setAdapter(mAdapter);
             }

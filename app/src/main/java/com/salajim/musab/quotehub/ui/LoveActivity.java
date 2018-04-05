@@ -36,9 +36,11 @@ public class LoveActivity extends AppCompatActivity {
         setContentView(R.layout.activity_love);
         ButterKnife.bind(this);
 
+        // Changing the actionbar name
         toolbar = getSupportActionBar();
         toolbar.setTitle("Love");
 
+        // Retrieving the love quotes from Firebase database
         database = FirebaseDatabase.getInstance();
         mRef = database.getReference("love");
 
@@ -49,6 +51,7 @@ public class LoveActivity extends AppCompatActivity {
                     mQuote.add(dataSnapshot1.getValue(Quote.class));
                 }
 
+                // Setting the adapter with ViewPager
                 mAdapter = new QuotePagerAdapter(getSupportFragmentManager(), mQuote);
                 mViewPager.setAdapter(mAdapter);
             }

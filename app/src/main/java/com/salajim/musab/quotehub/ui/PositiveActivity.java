@@ -36,9 +36,11 @@ public class PositiveActivity extends AppCompatActivity {
         setContentView(R.layout.activity_positive);
         ButterKnife.bind(this);
 
+        // Changing the toolbar name
         toolbar = getSupportActionBar();
         toolbar.setTitle("Positive");
 
+        // Retrieving positive quotes from Firebase database
         database = FirebaseDatabase.getInstance();
         mRef = database.getReference("positive");
 
@@ -49,6 +51,7 @@ public class PositiveActivity extends AppCompatActivity {
                     mQuote.add(dataSnapshot1.getValue(Quote.class));
                 }
 
+                // Setting the adapter with ViewPager
                 mAdapter = new QuotePagerAdapter(getSupportFragmentManager(), mQuote);
                 mViewPager.setAdapter(mAdapter);
             }
