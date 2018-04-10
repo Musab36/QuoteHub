@@ -1,6 +1,8 @@
 package com.salajim.musab.quotehub.fragments;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -11,8 +13,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.salajim.musab.quotehub.R;
 import com.salajim.musab.quotehub.models.Quote;
 
@@ -25,6 +25,10 @@ public class QuoteDetailFragment extends Fragment implements View.OnClickListene
     @Bind(R.id.quoteTextView) TextView mQuoteText;
     @Bind(R.id.authorTextView) TextView mAuthorTextView;
     @Bind(R.id.heartQuote) ImageView mHeart;
+
+    SharedPreferences sp;
+    public static final String USER_PREF = "USER_PREF";
+    public static final String MY_QUOTE = "MY_QUOTE";
 
     private Quote mQuote;
 
@@ -54,6 +58,8 @@ public class QuoteDetailFragment extends Fragment implements View.OnClickListene
         mQuoteText.setText(mQuote.getQuote());
         mAuthorTextView.setText(mQuote.getAuthor());
 
+        sp = getActivity().getSharedPreferences(USER_PREF, Context.MODE_PRIVATE);
+
         // Onclick listeners
         mHeart.setOnClickListener(this);
 
@@ -68,11 +74,11 @@ public class QuoteDetailFragment extends Fragment implements View.OnClickListene
     @Override
     public void onClick(View v) {
         if(v == mHeart) {
-            DatabaseReference mRef = FirebaseDatabase
-                    .getInstance()
-                    .getReference("favorites");
-            mRef.push().setValue(mQuote);
-            Toast.makeText(getContext(), "Added to favorites", Toast.LENGTH_SHORT).show();
+            String quote = mQuote.getQuote();
+            SharedPreferences.Editor editor = sp.edit();
+            editor.putString(MY_QUOTE, quote);
+            editor.commit();
+            Toast.makeText(getActivity(), "Added to favourites", Toast.LENGTH_SHORT).show();
         }
     }
 

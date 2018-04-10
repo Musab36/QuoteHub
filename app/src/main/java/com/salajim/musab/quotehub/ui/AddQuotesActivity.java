@@ -35,7 +35,7 @@ public class AddQuotesActivity extends AppCompatActivity implements View.OnClick
         setContentView(R.layout.activity_add_quotes);
         ButterKnife.bind(this);
 
-        quoteDatabase = FirebaseDatabase.getInstance().getReference("quotes");
+        quoteDatabase = FirebaseDatabase.getInstance().getReference("new");
 
         mSubmitButton.setOnClickListener(this);
         quotes = new ArrayList<>();

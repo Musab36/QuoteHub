@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_add"
-        android:icon="@drawable/ic_add_white_24dp"
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_share_white_24dp"
         app:showAsAction="always"
         android:title="Add" />
 
     <item
-        android:id="@+id/action_logout"
-        android:title="Logout"
+        android:id="@+id/action_about"
+        android:title="About"
         android:visible="true"
         app:showAsAction="never" />
 </menu>

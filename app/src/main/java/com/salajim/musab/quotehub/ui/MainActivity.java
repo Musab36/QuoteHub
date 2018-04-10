@@ -90,9 +90,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if(id == R.id.action_add) {
-            Intent intent = new Intent(MainActivity.this, AddQuotesActivity.class);
-            startActivity(intent);
+        if(id == R.id.action_share) {
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            shareIntent.setType("text/plain");
+            shareIntent.putExtra(android.content.Intent.EXTRA_TEXT, "Please checkout this cool quotes app!");
+            startActivity(shareIntent);
             return true;
         }
 
