@@ -27,8 +27,9 @@ public class QuoteDetailFragment extends Fragment implements View.OnClickListene
     @Bind(R.id.heartQuote) ImageView mHeart;
 
     SharedPreferences sp;
-    public static final String USER_PREF = "USER_PREF";
-    public static final String MY_QUOTE = "MY_QUOTE";
+    public static final String KEY_PREF = "KEY_PREF";
+    public static final String KEY_AUTHOR = "MY_QUOTE";
+    public static final String KEY_QUOTE = "KEY_QUOTE";
 
     private Quote mQuote;
 
@@ -58,7 +59,7 @@ public class QuoteDetailFragment extends Fragment implements View.OnClickListene
         mQuoteText.setText(mQuote.getQuote());
         mAuthorTextView.setText(mQuote.getAuthor());
 
-        sp = getActivity().getSharedPreferences(USER_PREF, Context.MODE_PRIVATE);
+        sp = getActivity().getSharedPreferences(KEY_PREF, Context.MODE_PRIVATE);
 
         // Onclick listeners
         mHeart.setOnClickListener(this);
@@ -75,8 +76,10 @@ public class QuoteDetailFragment extends Fragment implements View.OnClickListene
     public void onClick(View v) {
         if(v == mHeart) {
             String quote = mQuote.getQuote();
+            String author = mQuote.getAuthor();
             SharedPreferences.Editor editor = sp.edit();
-            editor.putString(MY_QUOTE, quote);
+            editor.putString(KEY_QUOTE, quote);
+            editor.putString(KEY_AUTHOR, author);
             editor.commit();
             Toast.makeText(getActivity(), "Added to favourites", Toast.LENGTH_SHORT).show();
         }
